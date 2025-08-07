@@ -28,7 +28,7 @@ const PodcastEmbed = () => {
                 Click to listen on your favorite platform
               </p>
             </div> */}
-            <iframe width="738" height="415" src="https://www.youtube.com/embed/3xvKS9L5Xbs?list=LL" title="Episode 7 - Part 1 | The Fundamentals of Pet Nutrition with Romain – Pet Nutritionist &amp; Brand Owner" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="738" height="415" src="https://www.youtube.com/embed/3xvKS9L5Xbs?list=LL" title="Episode 7 - Part 1 | The Fundamentals of Pet Nutrition with Romain – Pet Nutritionist &amp; Brand Owner" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
         </div>
       </div>

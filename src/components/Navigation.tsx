@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import QuestionDialog from "./QuestionDialog";
+import StoryDialog from "./StoryDialog";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isQuestionDialogOpen, setIsQuestionDialogOpen] = useState(false);
+  const [isStoryDialogOpen, setIsStoryDialogOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-lg border-b border-border">
@@ -20,18 +25,32 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
-              Merch
-            </a>
-            <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
+            <div className="flex items-center gap-2">
+              <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
+                Merch
+              </a>
+              <Badge variant="secondary" className="text-xs">Coming Soon</Badge>
+            </div>
+            <a 
+              href="https://www.youtube.com/@FurstThingsFurstPawdcast" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary transition-smooth font-medium"
+            >
               Podcast
             </a>
-            <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
+            <button 
+              onClick={() => setIsQuestionDialogOpen(true)}
+              className="text-foreground hover:text-primary transition-smooth font-medium"
+            >
               Ask a Question
-            </a>
-            <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
+            </button>
+            <button 
+              onClick={() => setIsStoryDialogOpen(true)}
+              className="text-foreground hover:text-primary transition-smooth font-medium"
+            >
               Submit a Story
-            </a>
+            </button>
             <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
               Community
             </a>
@@ -60,18 +79,32 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
-              <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
-                Merch
-              </a>
-              <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
+              <div className="flex items-center gap-2">
+                <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
+                  Merch
+                </a>
+                <Badge variant="secondary" className="text-xs">Coming Soon</Badge>
+              </div>
+              <a 
+                href="https://www.youtube.com/@FurstThingsFurstPawdcast" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-smooth font-medium"
+              >
                 Podcast
               </a>
-              <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
+              <button 
+                onClick={() => setIsQuestionDialogOpen(true)}
+                className="text-foreground hover:text-primary transition-smooth font-medium text-left"
+              >
                 Ask a Question
-              </a>
-              <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
+              </button>
+              <button 
+                onClick={() => setIsStoryDialogOpen(true)}
+                className="text-foreground hover:text-primary transition-smooth font-medium text-left"
+              >
                 Submit a Story
-              </a>
+              </button>
               <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
                 Community
               </a>
@@ -82,6 +115,16 @@ const Navigation = () => {
           </div>
         )}
       </div>
+      
+      {/* Dialogs */}
+      <QuestionDialog 
+        open={isQuestionDialogOpen} 
+        onOpenChange={setIsQuestionDialogOpen} 
+      />
+      <StoryDialog 
+        open={isStoryDialogOpen} 
+        onOpenChange={setIsStoryDialogOpen} 
+      />
     </nav>
   );
 };
