@@ -15,10 +15,10 @@ const Footer = () => {
             <a href="#" className="text-primary hover:underline">
               Privacy Policy
             </a>
-            . If you are a California resident, please{" "}
+            {/* . If you are a California resident, please{" "}
             <a href="#" className="text-primary hover:underline">
               click here
-            </a>
+            </a> */}
             .
           </p>
         </div>

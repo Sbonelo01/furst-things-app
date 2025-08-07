@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.jpg";
 import QuestionDialog from "./QuestionDialog";
 import StoryDialog from "./StoryDialog";
 
