@@ -51,9 +51,9 @@ const Navigation = () => {
             >
               Submit a Story
             </button>
-            <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
+            {/* <a href="#" className="text-foreground hover:text-primary transition-smooth font-medium">
               Community
-            </a>
+            </a> */}
           </div>
 
           {/* Desktop Shop Button */}
