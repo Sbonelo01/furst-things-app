@@ -9,19 +9,19 @@ const ProductGrid = () => {
   const categories = [
     {
       id: 1,
-      title: "Tops",
+      title: "Dog Food",
       image: product1,
       href: "#"
     },
     {
       id: 2,
-      title: "Bottoms",
+      title: "Cat Food",
       image: product2,
       href: "#"
     },
     {
       id: 3,
-      title: "Sets",
+      title: "Pet Care",
       image: product3,
       href: "#"
     },
@@ -36,25 +36,25 @@ const ProductGrid = () => {
   const featuredProducts = [
     {
       id: 1,
-      name: "Signature Purple Hoodie",
+      name: "Premium Dog Kibble",
       image: product1,
       href: "#"
     },
     {
       id: 2,
-      name: "Premium Pink Sweatpants",
+      name: "Gourmet Cat Food Selection",
       image: product2,
       href: "#"
     },
     {
       id: 3,
-      name: "Matching Set Collection",
+      name: "Complete Pet Care Kit",
       image: product3,
       href: "#"
     },
     {
       id: 4,
-      name: "Essential Yellow Tee",
+      name: "All Natural Pet Treats",
       image: product4,
       href: "#"
     }
